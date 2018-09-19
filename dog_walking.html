@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome! From here your dog can order a pizza!</title>
+</head>
+<body>
+
+    <main>
+        <h2>Thank you for visiting today! We just need some brief information from you so we can submit your pizza order!</h2>
+        <label for="dog type">What breed of dog can we expect?</label>
+        <select id="dog type" name="dog type">
+            <option value="Corgi">Corgi</option>
+            <option value="Pug">Pug</option>
+            <option value="German Shepherd">German Shepherd</option>
+            <option value="Pit Bull">Pit Bull</option>
+            <option value="Poodle">Poodle</option>
+            <option value="Sheepdog">Sheepdog</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        <label for="age">What age are you?</label>
+        <input id="age" for="age" placeholder="Age">
+        <br>
+        <br>
+        Thanks! Now lets talk about that pizza.
+        <br>
+        <br>
+        <label>What size pizza are you looking for?</label><br>
+        <input type="radio" id="small" name="pizza size" value="small">
+        <label for="small">Small</label>
+        <input type="radio" id="medium" name="pizza size" value="medium">
+        <label for="medium">Medium</label>
+        <input type="radio" id="large" name="pizza size" value="large">
+        <label for="large">Large</label>
+        <input type="radio" id="X-Large" name="pizza size" value="X-Large">
+        <label for="X-Large">X-Large</label>
+        <br>
+        <br>
+        Perfect! Now what kind of toppings will you want?
+        <br>
+        <br>
+        <select id="meat toppings" name="meat toppings" multiple>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Ham">Ham</option>
+            <option value="Chicken">Chicken</option>
+            <option value="Ground Beef">Ground Beef</option>
+            <option value="Bacon">Bacon</option>
+        </select>
+        <select id="vegetable toppings" name="vegetable toppings" multiple>
+            <option value="green peppers">Green Peppers</option>
+            <option value="Onion">Onion</option>
+            <option value="Olives">Olives</option>
+            <option value="Spinach">Spinach</option>
+            <option value="Banana Peppers">Banana Peppers</option>
+        </select>
+        <br>
+        <br>
+        Okay, will this be for delivery or pickup?
+        <br>
+        <br>
+        <input type="radio" id="delivery" name="delivery" value="delivery">
+        <label id="delivery">Delivery</label>
+        <input type="radio" id="pickup" name="delivery" value="pickup">
+        <label id="pickup">Pick up</label>
+        <br>
+        <br>
+        If delivery, we will need the address!
+        <br>
+        <br>
+        <label for="address street">Street</label>
+        <input type="text" id="address street" name="address street" placeholder="Street Address">
+        <label for="City/State/Zip">City/State/Zip</label>
+        <input type="text" id="City/State/Zip" name="City/State/Zip" placeholder="City/State/Zip">
+    </main>
+
+</body>
+</html>
