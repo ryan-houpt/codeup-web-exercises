@@ -9,52 +9,52 @@
     <br>
     <br>
     <label for="Property Address">Property Address</label>
-    <input id="Property Address" type="address" name="Property Address" placeholder="Property Address">
+    <input id="Property Address" type="text" name="Property Address" placeholder="Property Address">
     <br>
     <label for="Move date">Anticipated Move Date</label>
-    <input id="Move Date" type="move date" name="move date" placeholder="Move date"
+    <input id="Move Date" type="text" name="move date" placeholder="Move date"
     <label for="rent">Monthly Rent $</label>
-    <input id="rent" type="rent" name="rent" placeholder="Monthly Rent">
+    <input id="rent" type="text" name="rent" placeholder="Monthly Rent">
     <label for="Security deposit">Security Deposit $</label>
-    <input id="Security deposit" type="Security deposit" name="Security deposit" placeholder="Security Deposit">
+    <input id="Security deposit" type="text" name="Security deposit" placeholder="Security Deposit">
 
     <br>
     <br>
     Applicant was referred to the landlord by <br>
     Real Estate Agent <input type="radio" name="radio" value="Real Estate">
     <label for="agent name"> - Agent name</label>
-    <input id="agent name" type="name" name="agent name" placeholder="Agent Name">
+    <input id="agent name" type="text" name="agent name" placeholder="Agent Name">
     <label for="agent phone">Agent phone</label>
-    <input id="agent phone" type="agent phone" name="agent phone" placeholder="Agent Phone"><br>
+    <input id="agent phone" type="text" name="agent phone" placeholder="Agent Phone"><br>
     Newspaper<input type="radio" name="radio" value="Newspaper"><br>
     Sign<input type="radio" name="radio" value="Sign"><br>
     Internet<input type="radio" name="radio" value="Internet"><br>
     Other<input type="radio" name="radio" value="Other">
     <br>
     <br>
-    <strong>Applicant information</strong><br><br>
+    <h4>Applicant information</h4><br><br>
     <label for="applicant name">Applicant name (First, middle, last)</label>
-    <input id="applicant name" type="applicant name" name="applicant name" placeholder="Insert Name"><br><br>
+    <input id="applicant name" type="text" name="applicant name" placeholder="Insert Name"><br><br>
     Is there a Co-Applicant? (If yes, co-applicant must submit a seperate application.)<br>
     Yes<input type="radio" name="radio" value="Yes"><br>
     No<input type="radio" name="radio" value="No"><br>
     <br>
     Applicants former last name (maiden or married)<br>
-    <label for="former name">Former last name </label>
-    <input id="former name" type="name" name='former name' placeholder="former last name"><br>
+    <label for="former name">Last Name (if any)</label>
+    <input id="former name" type="text" name='former name' placeholder="former last name"><br>
     <label for="email">Email</label>
-    <input id="email" type="email" name="email" placeholder="Insert email">
+    <input id="email" type="email" name="email" placeholder="Insert Email">
     <label for="Home Phone">Home Phone</label>
-    <input id="Home Phone" type="home phone" name="home phone" placeholder="Insert Home Phone"><br>
-    <label for="work phone">Work Phone $</label>
-    <input id="work phone" type="work phone" name="work phone" placeholder="Insert Work Phone">
+    <input id="Home Phone" type="text" name="home phone" placeholder="Insert Home Phone"><br>
+    <label for="work phone">Work Phone</label>
+    <input id="work phone" type="text" name="work phone" placeholder="Insert Work Phone">
     <label for="mobile/pager">Mobile/Pager</label>
-    <input id="mobile/pager" type="mobile/pager" name="mobile/pager" placeholder="Insert Mobile/Pager #"><br>
+    <input id="mobile/pager" type="text" name="mobile/pager" placeholder="Insert Mobile/Pager #"><br>
     <label for="Social">Social Security #</label>
     <input id="Social" type="password" name='Social' placeholder="Insert Social Security #">
     <label for="driver license">Driver License #</label>
-    <input id="driver license" type="driver license" name="driver license" placeholder="Insert driver license #">
-    <input type="state" name="state" placeholder="Insert State"><br>
+    <input id="driver license" type="text" name="driver license" placeholder="Insert Driver License #">
+    <input type="text" name="state" placeholder="Insert State"><br>
     <label for="DOB">Date of Birth</label>
     <select id="DOB" name="DOB">
         <option value="January">January</option>
@@ -71,9 +71,9 @@
         <option value="December">December</option>
     </select>
     <label for="birth date">Day</label>
-    <input id="birth date" type="birth date" name="birth date" placeholder="Insert date">
+    <input id="birth date" type="text" name="birth date" placeholder="Insert date">
     <label for="birth year">Year</label>
-    <input id="birth year" type="birth year" name="birth year" placeholder="Insert year">
+    <input id="birth year" type="text" name="birth year" placeholder="Insert year">
     <label for="height">height (ft'in")</label>
     <select id="height" name="height">
         <option value="2">2</option>
@@ -118,11 +118,11 @@
         <option value="No">No</option>
     </select>
         <label for="citizenship">Country</label>
-        <input id="citizenship" type="text" name="citizenship" placeholder="Insert place of birth">
+        <input id="citizenship" type="text" name="citizenship" placeholder="Insert Place of Birth">
     <br><br>
-    <strong>Emergency Contact Information</strong><br>
+    <h4>Emergency Contact Information</h4><br>
     <label for="emer name">Emergency Name</label>
-    <input id="emer name" type="name" name='emer name' placeholder="Emergency Name">
+    <input id="emer name" type="text" name='emer name' placeholder="Emergency Name">
     <label for="emer address">Emergency Address</label>
     <input id="emer address" type="text" name="emer name" placeholder="Emergency Address"><br>
     <label for="emer phone">Emergency Phone</label>
@@ -130,7 +130,7 @@
     <label for="emer email">Emergency Email</label>
     <input id="emer email" type="text" name="emer email" placeholder="Emergency Email"><br><br>
 
-    <strong>Name all other persons who occupy the property</strong>:<br>
+    <h4>Name all other persons who occupy the property</h4><br>
     <label for="Occupant 1 name">Name</label>
     <input id="Occupant 1 name" type="text" name='Occupant 1' placeholder="Name">
     <label for="Occupant 1 Relationship">Relationship</label>
@@ -156,6 +156,8 @@
     <label for="Occupant 4 Age">Age</label>
     <input id="Occupant 4 Age" type="text" name="Occupant 4 Age" placeholder="Age"><br><br>
 
+    <h4>Address History</h4>
+
     <label for="Current Address">Applicants Current Address</label>
     <input id="Current Address" type="text" name='Current Address' placeholder="Current Address">
     <label for="Apartment #">Apartment #</label>
@@ -171,9 +173,119 @@
     <input id="Landlord phone" type="text" name='Landlord phone' placeholder="Phone - Night">
     <input id="Landlord phone" type="text" name="Landlord phone" placeholder="Phone - Mobile">
     <input id="Landlord phone" type="text" name="Landlord phone" placeholder="Phone - Fax"><br>
-    <label for="Move in date">Move in date</label>
-    <input id="Move in date" type="text" name='Move in date' placeholder="Move in date">
+    <label for="Move in date">Move in date - </label>
+    Month<select id="move in date" name="move in date">
+        <option value="January">January</option>
+        <option value="Februrary">Februrary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <input id="Move in date" type="text" name='Move in date' placeholder="Move in day">
+    <input id="Move in year" type="text" name='Move in year' placeholder="Move in year">
+    <label for="Move out date">Move out date - </label>
+    Month<select id="move out date" name="move out date">
+        <option value="January">January</option>
+        <option value="Februrary">Februrary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <input id="Move out date" type="text" name='Move out date' placeholder="Move out day">
+    <input id="Move out year" type="text" name='Move out year' placeholder="Move out year"><br><br>
+    <label for="move out reason">Reason for move</label><br>
+    <textarea name="move out reason"></textarea><br><br>
 
+    <label for="Previous Address">Previous Address</label>
+    <input id="Previous Address" type="text" name='Previous Address' placeholder="Previous Address">
+    <label for="Apartment #">Apartment #</label>
+    <input id="Apartment #" type="text" name="Apartment #" placeholder="Apartment #">
+    <label for="state/city">City/State/Zip</label>
+    <input id="state/city" type="text" name="state/city" placeholder="City/State/Zip"><br>
+    <label for="Landlord name">Landlord Name</label>
+    <input id="Landlord name" type="text" name='Landlord name' placeholder="Landlord name">
+    <label for="Landlord email">Landlord email</label>
+    <input id="Landlord email" type="text" name="Landlord email" placeholder="Landlord email"><br>
+    <label for="Landlord phone">Phone</label>
+    <input id="Landlord phone" type="text" name="Landlord phone" placeholder="Phone - Day">
+    <input id="Landlord phone" type="text" name='Landlord phone' placeholder="Phone - Night">
+    <input id="Landlord phone" type="text" name="Landlord phone" placeholder="Phone - Mobile">
+    <input id="Landlord phone" type="text" name="Landlord phone" placeholder="Phone - Fax"><br>
+    <label for="Move in date">Move in date - </label>
+    Month<select id="move in date" name="move in date">
+        <option value="January">January</option>
+        <option value="Februrary">Februrary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <input id="Move in date" type="text" name='Move in date' placeholder="Move in day">
+    <input id="Move in year" type="text" name='Move in year' placeholder="Move in year">
+    <label for="Move out date">Move out date - </label>
+    Month<select id="move out date" name="move out date">
+        <option value="January">January</option>
+        <option value="Februrary">Februrary</option>
+        <option value="March">March</option>
+        <option value="April">April</option>
+        <option value="May">May</option>
+        <option value="June">June</option>
+        <option value="July">July</option>
+        <option value="August">August</option>
+        <option value="September">September</option>
+        <option value="October">October</option>
+        <option value="November">November</option>
+        <option value="December">December</option>
+    </select>
+    <input id="Move out date" type="text" name='Move out date' placeholder="Move out day">
+    <input id="Move out year" type="text" name='Move out year' placeholder="Move out year"><br><br>
+    <label for="move out reason">Reason for move</label><br>
+    <textarea name="move out reason"></textarea><br><br>
+
+    <h4>Employment Information</h4>
+
+    <label for="Current Employer">Current Employer</label>
+    <input id="Current Employer" type="text" name='Current Employer' placeholder="Employer"><br>
+    <label for="Employer Address">Employer Address</label>
+    <input id="Employer Address" type="text" name="Employer Address" placeholder="Employer Address">
+    <label for="Supervisor Name">Supervisor Name</label>
+    <input id="Supervisor Name" type="text" name="Supervisor Name" placeholder="Supervisor Name">
+    <label for="Supervisor Phone">Supervisor Phone</label>
+    <input id="Supervisor Phone" type="text" name='Supervisor Phone' placeholder="Supervisor Phone">
+    <label for="Supervisor Fax">Supervisor Fax</label>
+    <input id="Supervisor Fax" type="text" name="Supervisor Fax" placeholder="Supervisor Fax"><br>
+    <label for="Supervisor email">Supervisor Email</label>
+    <input id="Supervisor email" type="text" name='Supervisor email' placeholder="Supervisor Email"><br>
+    <label for="Start date">Start Date</label>
+    <input id="Start Date" type="text" name="Start Date" placeholder="Start Date">
+    <label for="Monthly Income">Monthly Income $</label>
+    <input id="Monthly Income" type="text" name="Monthly Income" placeholder="Monthly Income">
+    <label for="Position">Position Held</label>
+    <input id="Position" type="text" name='Position' placeholder="Position Held"><br>
+    <br>
+    <button type="submit">Submit the Application</button>
+    <br><br>
+<footer>(TAR-2003) 10-16-17 Page 1 of 4</footer>
 
 </body>
 </html>
