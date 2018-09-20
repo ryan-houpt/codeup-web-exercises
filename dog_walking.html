@@ -60,9 +60,9 @@
         <br>
         <br>
         <input type="radio" id="delivery" name="delivery" value="delivery">
-        <label id="delivery">Delivery</label>
-        <input type="radio" id="pickup" name="delivery" value="pickup">
-        <label id="pickup">Pick up</label>
+        <label id="delivery" for="delivery">Delivery</label>
+        <input type="radio" id="pickup" name="pickup" value="pickup">
+        <label id="pickup" for="pickup">Pick-up</label>
         <br>
         <br>
         If delivery, we will need the address!
@@ -71,8 +71,11 @@
         <label for="address street">Street</label>
         <input type="text" id="address street" name="address street" placeholder="Street Address">
         <label for="City/State/Zip">City/State/Zip</label>
-        <input type="text" id="City/State/Zip" name="City/State/Zip" placeholder="City/State/Zip">
+        <input type="text" id="City/State/Zip" name="City/State/Zip" placeholder="City/State/Zip"><br><br>
+        Special instructions (gate code, apt number)<br>
+        <textarea placeholder="Special Instructions"></textarea><br><br>
+        Anything else you would like us to know?<br>
+        <textarea placeholder="Extra Information"></textarea>
     </main>
-
 </body>
 </html>
