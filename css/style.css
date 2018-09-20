@@ -2,3 +2,120 @@
     color: purple;
     text-decoration: underline;
 }
+
+Article {
+    background-image: url(https://muawia.com/wp-content/uploads/2018/07/trace-3157431__340.jpg);
+    background-position: bottom, center;
+    background-repeat: no-repeat;
+}
+
+h1 {text-align: center}
+
+h2 {
+    color: green;
+    text-decoration: underline;
+}
+
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+body{background: linear-gradient(to right, #3d7eaa, #ffe47a);}
+
+
+ol {list-style: square}
+
+tr {
+    text-decoration: underline;
+    color: lawngreen;
+}
+a:link{
+    color:cornsilk;
+}
+
+a:visited{
+    color:purple;
+}
+
+a:hover{
+    color: darkblue;
+}
+
+a:active{
+    color: red;
+    font-size: 50px;
+}
+
+.Top { background-image: src: technology.jpg;)
+        background-position: center;
+        height: 500px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    background-color: forestgreen;
+    overflow: hidden;
+    width: 50%;
+    height:0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);}
+
+body {
+    padding: 50px;
+}
+img{
+    width: 100px;
+    height: 100px;
+    background-color: #0CB1C4;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform: rotate(3deg);
+    transform: rotate(0.3rad);/
+    transform: rotate(3grad);
+    transform: rotate(.03turn);
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
