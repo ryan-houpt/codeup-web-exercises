@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+}
+
+.top-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: black;
+    height: 40px;
+    margin: 0;
+}
+
+.nav-item{
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    margin: 0 .5em;
+    position: relative;
+    top: -5px;
+    left: 50px;
+}
+
+.nav-bar{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header{
+    margin: 0;
+}
+
+.logo{
+    background-color: white;
+    color: black;
+    height: 25px;
+    width: 25px;
+}
+
+.logo2{
+    margin: 0 50px 0 25px;
+}
+
+.container{
+    background-color: rgb(234, 234, 234);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.container2{
+    margin: 0 auto;
+    background-color: white;
+    width: 70%;
+    height: 620px;
+}
+
+.container3{
+    background-color: rgb(238, 238, 238);
+    width: 98%;
+    margin: 0 auto;
+    height: 98%;
+}
+
+.container4{
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    height: 55%;
+    margin: 75px 0;
+}
+
+.container5{
+    background-image: linear-gradient(to right, white , lightgrey);
+    height: 240px;
+    position: relative;
+    width: 85%;
+    top: 50px;
+    float: left;
+    flex-wrap: wrap;
+    left: 75px;
+    border-radius: 5%;
+}
+
+.errorphoto{
+    float: right;
+    position: relative;
+    top: -130px;
+    left: -80px;
+    border-radius: 50%;
+}
+
+.errortitle{
+    font-weight: bold;
+    margin: 10px 0 0 22px;
+}
+
+.top-error{
+    position: relative;
+    top: 50px;
+    font-weight: bold;
+    font-size: X-large;
+    left: 20px;
+    margin: 0;
+}
+
+.footer{
+    background-color: rgb(98, 98, 98);
+    height: 100px;
+}
+
+.footernavlogo{
+    list-style: none;
+    float: left;
+    margin: 10px 5px 0 0px;
+    align-content: center
+}
+
+.bbcresponse{
+    position: absolute;
+    top: 550px;
+}
