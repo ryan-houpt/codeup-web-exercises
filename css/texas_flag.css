@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+p {
+}
+span {
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+}
+.container {
+    background-color: white;
+    min-height: 2000px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.box1 {
+    height: 150px;
+    width: 20%;
+    padding: 10px;
+    background: blue;
+    float: left;
+}
+.box2 {
+    height: 75px;
+    width: 65%;
+    padding: 10px;
+    background: white;
+}
+.box3 {
+    height: 60px;
+    width: 40%;
+    padding: 10px;
+    background: red;
+    position: relative;
+    left: 140px;
+    top: -5px;
+}
+
+.star {
+    width: 0;
+    height: 0;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+    border-bottom: solid 30px white;
+    transform: rotateZ(247deg);
+    position: relative;
+    top: -115px;
+    left: 39px;
+}
+
+.star2 {
+    width: 0;
+    height: 0;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+    border-bottom: solid 30px white;
+    transform: rotateZ(115deg);
+    position: relative;
+    top: -145px;
+    left: 41px;
+}
+
+.star3 {
+    width: 0;
+    height: 0;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
+    border-bottom: solid 30px white;
+    transform: rotateZ(180deg);
+    position: relative;
+    top: -179px;
+    left: 40px;
+}
