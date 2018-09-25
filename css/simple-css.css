@@ -1,0 +1,26 @@
+body {
+    background-image: url("../forest.jpg");
+    background-color: #cccccc;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+}
+
+.centerhr {
+    text-align: center;
+    color: white;
+    width: 25%;
+    vertical-align: 50%;
+}
+
+.centerp {
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+}

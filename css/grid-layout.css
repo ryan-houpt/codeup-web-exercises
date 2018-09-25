@@ -1,0 +1,38 @@
+@media screen and (min-width:339px) and (max-width:899px)
+
+.row {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.column {
+    padding: 10px;
+    height: 40px;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 10px;
+    /*   border: 1px solid black;
+     background-color: grey; */
+}
+
+.one-half {
+    width: 50%;
+}
+
+.one-third {
+    width: 33.333%;
+}
+
+.one-fourth {
+    width: 25%;
+}
+
+.one-eighth {
+    width: 12.5%;
+}
+
