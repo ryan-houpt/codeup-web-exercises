@@ -72,4 +72,7 @@
         display: block;
         */
     }
+    .sub-section{
+        font-style: italic;
+    }
 }
