@@ -118,4 +118,19 @@ body{
 .bbcresponse{
     position: absolute;
     top: 550px;
+    width: 30%;
+    color: white;
+}
+
+.footerlinks {
+    list-style-type: none;
+    color: white;
+    position: absolute;
+    left: 700px
+}
+
+.rightlist {
+    position: relative;
+    left: 100px;
+    top: -35px;
 }
