@@ -7,3 +7,15 @@ h1 {
 .jumbotron {
     background-image: url("./pizza.png");
 }
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.lightblue {
+    background-color: lightblue;
+}
+
+.textblue {
+    color: rgb(0, 102, 255);
+}
