@@ -1,60 +1,27 @@
-@media screen and (min-width:375px) and (max-width: 1024px){
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
 
-    html {
-        height: 100%;
-    }
+li {
+    float: left;
+}
 
-    body {
-        background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-repeat: no-repeat;
-        height: 100%;
-        margin: 0;
-        background-attachment: fixed;
-    }
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
 
-    h2 {
-        text-align: center;
-        font-family: "Trebuchet MS", Helvetica, sans-serif;
-        color: White; !important;
-        font-size: 3em;
-        margin: 0;
-    }
+li a:hover:not(.active) {
+    background-color: #111;
+}
 
-    .callerselection {
-        height: 20px;
-        text-align: center;
-        vertical-align: middle;
-        margin: 0 auto;
-        background-color: lightgrey;
-        border: 1px solid black;
-    }
-
-    .currentcallheader {
-        font-weight: bold;
-        text-decoration: underline;
-        text-align: center;
-        color: white;
-        margin: 20px 0 0 0;
-    }
-
-    button.buyoption {
-        width: 80%;
-        margin: 10px auto; !important;
-    }
-
-    .callboard {
-        margin: 0 auto;
-        height: 500px;
-        background: white;
-        width: 80%;
-    }
-
-    li {
-        list-style-type: none;
-        text-align: center;
-        margin: 0 0 100px 0;
-
-    }
-
-
+.active {
+    background-color: #4CAF50;
 }
