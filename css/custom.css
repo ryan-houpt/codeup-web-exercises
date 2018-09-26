@@ -1,7 +1,9 @@
 h1 {
-
+    text-align: center;
+    color: rgba(21,21,39,0.85);
+    background-color: rgba(143,150,222,0.24);
 }
 
-.jumbotron{
-    background-image: url("pizza.png");
+.jumbotron {
+    background-image: url("./pizza.png");
 }
