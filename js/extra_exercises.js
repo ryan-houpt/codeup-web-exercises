@@ -1,4 +1,4 @@
-/*
+
 // problem 1
 
 var inputString = prompt("What is the input string?");
@@ -104,7 +104,7 @@ alert("Each person gets " + slicesPerPerson.toFixed(0) + " pieces of pizza" + "\
 // Sometimes you have to round up to the next number rather
 // than follow standard rounding rules.
 // Calculate gallons of paint needed to paint the ceiling of a room. Prompt for the length and width, and
-assume one gallon covers 350 square feet. Display the number of gallons needed to paint the ceiling as a whole number.
+// assume one gallon covers 350 square feet. Display the number of gallons needed to paint the ceiling as a whole number.
 // Example Output
 //        You will need to purchase 2 gallons of
 //        paint to cover 360 square feet.
@@ -132,9 +132,81 @@ alert("You will need to purchase " + roundedGallonsOfPaint + " gallons of " + "\
 //Print out the new amount in U.S. dollars. The formula for currency conversion is
 
 
-*/
-
 var euros = parseFloat(prompt("How many Euros do you currently have?"));
 var usDollars = (euros * .87);
 
 alert("The current exchange rate for Euros is .87" + "\n" + "You currently have " + usDollars + " USD");
+
+
+// 8. Compute Simple Interest
+// Computing simple interest is a great way to quickly figure out whether an investment has value.
+// It’s also a good way to get comfortable with explicitly coding the order of operations in your programs.
+// Create a program that computes simple interest. Prompt for the principal amount, the rate as a percentage,
+// and the time, and display the amount accrued (principal + interest).
+// The formula for simple interest is A = P(1 + rt), where P is the principal amount, r is the annual rate of interest,
+// t is the number of years the amount is invested, and A is the amount at the end of the investment.
+// Example Output
+//        Enter the principal: 1500
+//        Enter the rate of interest: 4.3
+//        Enter the number of years: 4
+//        After 4 years at 4.3%, the investment will
+//        be worth $1758.
+// Constraints
+// • Prompt for the rate as a percentage (like 15, not .15). Divide the input by 100 in your program.
+// • Ensure that fractions of a cent are rounded up to the next penny.
+// • Ensure that the output is formatted as money.
+// Challenges
+// • Ensure that the values entered for principal, rate, and number of years are numeric and that the program will not
+// let the user proceed without valid inputs.
+
+
+
+
+var principalAmount = parseFloat(prompt("What is the principal amount?"));
+var rateOfInterest = parseFloat(prompt("What is the rate of interest?"));
+var yearsInvested = parseFloat(prompt("What is the length of investment (in years)?"));
+const simpleInterest = principalAmount * (1 + ((rateOfInterest / 100) * yearsInvested));
+var simpleInterestCeil = Math.ceil(simpleInterest);
+
+alert("After " + yearsInvested + " years at " + rateOfInterest + "%, the investment will" + "\n" + "be worth $" + simpleInterestCeil.toFixed(2));
+
+
+
+// 9. Calculating compound interest
+//   Simple interest is something you use only when making a quick guess. Most investments use a compound interest formula,
+// which will be much more accurate. And this formula requires you to incorporate exponents into your programs.
+//   Write a program to compute the value of an investment compounded over time. The program should ask for the starting amount,
+// the number of years to invest, the interest rate, and the number of periods per year to compound.
+//
+//
+// The formula you’ll use for this is
+//   A = P ( 1 + r/n )^nt
+//   Amount is Principle times (1 plus (rate / number of times interest is compounded per year)) t
+//   where
+// - P is the principal amount.
+// - r is the annual rate of interest.
+// - t is the number of years the amount is invested.
+// - n is the number of times the interest is compounded per year.
+// - A is the amount at the end of the investment.
+//   Example Output
+//        What is the principal amount? 1500
+//        What is the rate? 4.3
+//        What is the number of years? 6
+//        What is the number of times the interest
+//        is compounded per year? 4
+//        $1500 invested at 4.3% for 6 years
+//        compounded 4 times per year is $1938.84.
+//   Constraints
+//   • Prompt for the rate as a percentage (like 15, not .15). Divide the input by 100 in your program.
+//   • Ensure that fractions of a cent are rounded up to the next penny.
+//   • Ensure that the output is formatted as money.
+
+
+var principalAmountCompound = parseFloat(prompt("What is the principal amount?"));
+var rateOfInterestCompound = parseFloat(prompt("What is the rate of interest?"));
+var yearsInvestedCompound = parseFloat(prompt("What is the length of investment (in years)?"));
+var timesCompoundedPerYear = parseFloat(prompt("How ofter is interest compounded per year?"));
+const compoundInterest = principalAmountCompound * Math.pow(1 + (((rateOfInterestCompound  / 100) / timesCompoundedPerYear)), (timesCompoundedPerYear * yearsInvested));
+
+alert("$" + principalAmountCompound + " invested at " + rateOfInterestCompound + "% for " + yearsInvestedCompound + " years" + "\n" + "compounded " + timesCompoundedPerYear + " times per year is $" + compoundInterest.toFixed(2));
+
