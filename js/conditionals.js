@@ -69,6 +69,51 @@ if (userChoice === false) {
  */
 
 function analyzeColor(colorInput) {
+    if (colorInput === "blue") {
+        alert("Blue is the color of the sky");
+    } else if (colorInput === "red") {
+        alert("Red is the color of one of my cups");
+    } else if (colorInput === "orange") {
+        alert("Orange is the color of a fruit");
+    } else if (colorInput === "yellow") {
+        alert("Yellow is the color of a banana");
+    } else if (colorInput === "green") {
+        alert("Green is the color of grass");
+    } else if (colorInput === "indigo") {
+        alert("Indigo is a color");
+    } else if (colorInput === "violet") {
+        alert("Violet is a color too");
+    } else {
+        alert("I don't think thats a color...")
+    }
+}
+
+
+analyzeColor("red");
+
+
+// Don't change the next two lines!
+// These lines create two variables for you:
+// - `colors`: a list of the colors of the rainbow
+// - `randomColor`: contains a single random color value from the list (this
+//                  will contain a different color everytime the page loads)
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+var randomColor = colors[Math.floor(Math.random() * colors.length)];
+/**
+ * TODO:
+ * Pass the `randomColor` variable to your function and console.log the results.
+ * You should see a different message everytime you refresh the page
+ */
+
+analyzeColor(randomColor);
+
+
+/**
+ * TODO:
+ * Refactor your above function to use a switch-case statement
+ */
+
+function analyzeColorSwitch(colorInput) {
     switch (colorInput) {
         case "blue":
             alert("Blue is the color of the sky");
@@ -96,31 +141,6 @@ function analyzeColor(colorInput) {
     }
 }
 
-analyzeColor("red");
-
-
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color everytime the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
-/**
- * TODO:
- * Pass the `randomColor` variable to your function and console.log the results.
- * You should see a different message everytime you refresh the page
- */
-
-analyzeColor(randomColor);
-
-
-/**
- * TODO:
- * Refactor your above function to use a switch-case statement
- */
-
-
 
 /**
  * TODO:
@@ -130,7 +150,7 @@ analyzeColor(randomColor);
  */
 
 
-analyzeColor(userColor);
+analyzeColorSwitch(userColor);
 
 
 
