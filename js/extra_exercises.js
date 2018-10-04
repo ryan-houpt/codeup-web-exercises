@@ -1,6 +1,6 @@
 
 // problem 1
-
+/*
 var inputString = prompt("What is the input string?");
 
 if (inputString === "") {
@@ -209,4 +209,15 @@ var timesCompoundedPerYear = parseFloat(prompt("How ofter is interest compounded
 const compoundInterest = principalAmountCompound * Math.pow(1 + (((rateOfInterestCompound  / 100) / timesCompoundedPerYear)), (timesCompoundedPerYear * yearsInvested));
 
 alert("$" + principalAmountCompound + " invested at " + rateOfInterestCompound + "% for " + yearsInvestedCompound + " years" + "\n" + "compounded " + timesCompoundedPerYear + " times per year is $" + compoundInterest.toFixed(2));
+
+*/
+
+function hasLetterA(input) {
+    var output;
+    var letterCount = input.includes("a");
+    output = letterCount;
+    return output;
+}
+
+console.log(hasLetterA('ADFGJDF');
 
