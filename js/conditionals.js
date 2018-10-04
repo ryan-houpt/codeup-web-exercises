@@ -155,19 +155,17 @@ analyzeColor(userColor);
 
 function calculateTool(luckyNumber, totalPrice) {
 
-    var luckyNumberInput = luckyNumber;
-
-    if (luckyNumberInput === 1) {
+    if (luckyNumber === 1) {
       var luckyNumberPercentage = .10
-    } else if (luckyNumberInput === 2) {
+    } else if (luckyNumber === 2) {
         luckyNumberPercentage = .25
-    } else if (luckyNumberInput === 3) {
+    } else if (luckyNumber === 3) {
         luckyNumberPercentage = .35
-    } else if (luckyNumberInput === 4) {
+    } else if (luckyNumber === 4) {
         luckyNumberPercentage = .5
-    } else if (luckyNumberInput === 5) {
+    } else if (luckyNumber === 5) {
         luckyNumberPercentage = 1
-    } else if (luckyNumberInput === 0) {
+    } else if (luckyNumber === 0) {
         luckyNumberPercentage = 0
     }
 
@@ -190,7 +188,7 @@ calculateTool(2, 100);
     var luckyNumberRandom = Math.floor(Math.random() * 6);
 
     var userBill = prompt("What was your total bill?");
-    alert("Congratulations your lucky number is " + luckyNumberRandom)
+    alert("Congratulations your lucky number is " + luckyNumberRandom);
 
-    calculateTool(parseFloat(luckyNumberRandom), userBill);
+    calculateTool(luckyNumberRandom, userBill);
 
