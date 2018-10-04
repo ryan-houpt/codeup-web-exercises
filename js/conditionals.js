@@ -28,19 +28,22 @@ if (userChoice === false) {
     var evenOrOdd = parseFloat(userNumber) % 2;
     var plusOneHundred = parseFloat(userNumber) + 100;
 
-    if (evenOrOdd === 0) {
-        alert("Your number is even")
+    if (isNaN(userNumber) === true) {
+        alert("Please enter a number")
     } else {
-        alert("Your number is odd")
-    }
+        if (evenOrOdd === 0) {
+            alert("Your number is even")
+        } else {
+            alert("Your number is odd")
+        }
+        alert("Your number plus 100 is " + plusOneHundred);
 
-    alert("Your number plus 100 is " + plusOneHundred);
-
-    if (parseFloat(userNumber) < 0) {
-        alert("Your number is Negative")
-    }
-    else {
-        alert("Your number is positive")
+        if (parseFloat(userNumber) < 0) {
+            alert("Your number is Negative")
+        }
+        else {
+            alert("Your number is positive")
+        }
     }
 }
 
