@@ -627,8 +627,14 @@ console.log(whiteSpaceCounter("   fdfd   "));
 // If the second string input is not present in the first,
 // return the first string as entered in the function.
 
+function twoWord(word1, word2) {
+    if (word1.search(word2)) {
+        return word1.replace(word2, "");
+    } else
+        return word1;
+}
 
-
+console.log(twoWord("worldisbob", "bob"));
 // 3) Create a function that takes in a string and returns true if the last letter is an "a" (otherwise, return false).
 
 function detectLastLetter(input){
@@ -649,9 +655,7 @@ console.log(detectLastLetter("dfkjgfdg"));
 // Create a function returnMessage() that takes in a function and returns the call to the function
 // Experiement passing in different functions.
 
-function returnTrueMessage(){
-    return
-}
+
 
 // 6) Create a function, willLoginUser() that takes in a username string, password string, user age, a boolean indicating if
 // they are an admin. The function will return true if the username is not the same as the password and the user is at least 18 years old.
