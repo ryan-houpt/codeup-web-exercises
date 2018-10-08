@@ -188,8 +188,8 @@ console.log(doMath(subtract, 5, 2));
 
 
 
-
-Make a function named isOdd(number)
+//
+// Make a function named isOdd(number)
 
 function isOdd(number) {
     if (number % 2 === 0)
