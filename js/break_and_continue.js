@@ -2,7 +2,7 @@ var userNumber;
 
 while (true) {
     userNumber = parseFloat(prompt("Pick any odd number"));
-    if (userNumber % 2 !== 0)
+    if (userNumber % 2 !== 0 && userNumber < 50 && userNumber > 0)
         break;
 }
 

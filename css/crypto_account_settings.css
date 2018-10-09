@@ -72,3 +72,8 @@ button:hover {
 .bgcolor {
     background-color: rgb(34,49,57);
 }
+
+.callcard {
+    background-color: rgb(28,44,64);
+    height: 20px;
+}
