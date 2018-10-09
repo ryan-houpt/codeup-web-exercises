@@ -47,3 +47,11 @@ body {
 .white {
     color: white;
 }
+
+.bgcolor {
+    background-color: rgb(34,49,57);
+}
+
+.bgbar {
+    background-color: rgb(52,76,88);
+}

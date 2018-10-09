@@ -7,11 +7,9 @@ input[type=text], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
     outline: none;
 }
 
@@ -65,4 +63,12 @@ button:hover {
     .cancelbtn, .signupbtn {
         width: 100%;
     }
+}
+
+.bgbar {
+    background-color: rgb(52,76,88);
+}
+
+.bgcolor {
+    background-color: rgb(34,49,57);
 }
