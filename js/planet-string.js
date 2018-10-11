@@ -81,6 +81,7 @@
     function moveFirstToLast(array) {
         var arrayshift = array.shift();
         array = array.push(arrayshift);
+
         return array
     }
 
