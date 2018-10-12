@@ -370,7 +370,7 @@
 //
 // console.log(getEmployeeCount());
 //
-//
+// //
 //      function getTotalNumberOfSales(officeReport) {
 //         var totalSales = 0;
 //         officeReport.employees.forEach(function (element) {
