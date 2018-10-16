@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<h2><time>00:00:00</time></h2>-->
+<!--<button id="start">START</button>-->
+<!--<button id="stop">STOP</button>-->
+<!--<button id="clear">RESET</button>-->
+
+
+<table>
+    <tr>
+        <td id="a">A</td>
+        <td id="b">B</td>
+        <td id="c">C</td>
+        <td id="d">D</td>
+    </tr>
+    <tr>
+        <td id="e">E</td>
+        <td id="f">F</td>
+        <td id="g">G</td>
+        <td id="h">H</td>
+    </tr>
+    <tr>
+        <td id="i">I</td>
+        <td id="j">J</td>
+        <td id="k">K</td>
+        <td id="l">L</td>
+    </tr>
+    <tr>
+        <td id="m">M</td>
+        <td id="n">N</td>
+        <td id="o">O</td>
+        <td id="p">P</td>
+    </tr>
+    <tr>
+        <td id="q">Q</td>
+        <td id="r">R</td>
+        <td id="s">S</td>
+        <td id="t">T</td>
+    </tr>
+    <tr>
+        <td id="u">U</td>
+        <td id="v">V</td>
+        <td id="w">W</td>
+        <td id="x">X</td>
+    </tr>
+    <tr>
+        <td id="y">Y</td>
+        <td id="z">Z</td>
+    </tr>
+</table>
+
+
+<script>
+
+    // BONUS 1 - create a stop watch app
+    // 1) stop watch display that shows the time to the nearest 100th of a second
+    // 2) start button to start the stop watch
+    // 3) reset button to reset the time to zero
+    // 4) pause button to stop the stop watch
+    // Additional Features:
+    // 1) store a list of times in an aside div that are appended to every time the reset button is hit
+    // 2) add delete buttons for each stored time that removes the time from the aside div
+    // 3) add keyboard events to control starting, pausing, and resetting
+
+    // var h1 = document.getElementsByTagName('h2')[0],
+    //     start = document.getElementById('start'),
+    //     stop = document.getElementById('stop'),
+    //     clear = document.getElementById('clear'),
+    //     seconds = 0, minutes = 0, hours = 0,
+    //     t;
+    //
+    // function add() {
+    //     seconds++;
+    //     if (seconds >= 60) {
+    //         seconds = 0;
+    //         minutes++;
+    //         if (minutes >= 60) {
+    //             minutes = 0;
+    //             hours++;
+    //         }
+    //     }
+    //
+    //     h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+    //
+    //     timer();
+    // }
+    // function timer() {
+    //     t = setTimeout(add, 999);
+    // }
+    // timer();
+    //
+    //
+    // /* Start button */
+    // start.onclick = timer;
+    //
+    // /* Stop button */
+    // stop.onclick = function() {
+    //     clearTimeout(t);
+    // }
+    //
+    // /* Clear button */
+    // clear.onclick = function() {
+    //     h1.textContent = "00:00:00";
+    //     seconds = 0; minutes = 0; hours = 0;
+    // }
+    // BONUS 2 - create a Hangman game
+    // Allow user 1 to enter a random word for user 2 to try to guess.
+    // - display the number of guesses
+    // - display the letters already attempted
+    // - display the word as it is being completed and the letters not already guessed with underscores
+    // - a form should allow the user to type a letter guess
+    // - do not accept inputs that are more than one letter or are not letters (ignore case)
+
+    // user is prompted for word
+   var user1word = prompt("What word would you like to use?");
+   var underscore = "";
+
+    function hangManGame() {
+
+        String.prototype.replaceAt=function(index, replacement) {
+            return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+        };
+
+        var
+            userword_ = user1word.length,
+            totalguesses = 5,
+            user2guess;
+
+        // user has display of _ _ for however many letters
+
+       for (i = 0; i < userword_; i++) {
+            underscore = document.createTextNode(" _ ");
+            document.body.appendChild(underscore);
+        }
+
+
+        // display the Alphabet for onclickable actions
+
+        document.getElementById('a').onclick = function () {
+                if (user1word.indexOf('a') >= 1) {
+                    alert("That letter was found!");
+                    var createA = document.createTextNode('a');
+                    var indexOfA = user1word.indexOf("a") + 1;
+                    } else {
+                    alert("That letter was not found!");
+                }
+                }
+
+        // if clicked letter once searched in string is not found, add X on screen and alert "sorry try again"
+        // if clicked letter once searched in string is found, alert "great!" and fill in that spot on the _ _ with the letter
+
+    }
+
+    hangManGame()
+    // BONUS 3 - Create a zoomable font size effect with mouse scroll
+
+
+
+
+</script>
+</body>
+</html>
