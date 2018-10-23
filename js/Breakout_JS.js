@@ -2,8 +2,8 @@ var canvas = document.getElementById("myCanvas"); // creating the game canvas
 var ctx = canvas.getContext("2d"); // declaring 2D form
 var x = canvas.width/2;  // starting X position
 var y = canvas.height-30; // starting Y position
-var dx = 2; // ball X movement var
-var dy = -2; // ball Y movement var
+var dx = 4; // ball X movement var
+var dy = -4; // ball Y movement var
 var ballRadius = 10; //radius sizing of the ball
 var score = 0; //scoring variable
 var lives = 3;
@@ -16,8 +16,8 @@ var rightPressed = false;
 var leftPressed = false;
 
 // brick variables
-var brickRowCount = Math.floor((Math.random() * 4) + 1);
-var brickColumnCount = Math.floor((Math.random() * 5) + 1);
+var brickRowCount = 3;
+var brickColumnCount = 9;
 var brickWidth = 75;
 var brickHeight = 20;
 var brickPadding = 10;
@@ -81,18 +81,16 @@ function collisionDetection() {
 function drawBall() {
 
     // Ball sizing and fill
-    ctx.beginPath();
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
-    ctx.fillStyle = "0095DD";
+    ctx.fillStyle = "blue";
     ctx.fill();
-    ctx.closePath();
 
 }
 
 function drawPaddle() {
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "0095DD";
+    ctx.fillStyle = "green";
     ctx.fill();
     ctx.closePath();
 }
@@ -107,7 +105,7 @@ function drawBricks() {
                 bricks[c][r].y = brickY;
                 ctx.beginPath();
                 ctx.rect(brickX, brickY, brickWidth, brickHeight);
-                ctx.fillstyle = "red";
+                ctx.fillstyle = "orange";
                 ctx.fill();
                 ctx.closePath();
             }
@@ -131,12 +129,12 @@ function draw() {
 
     // clears canvas and redraws the ball at its new position
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBricks();
     drawBall();
     drawPaddle();
-    collisionDetection();
-    drawBricks();
     drawScore();
     drawLives();
+    collisionDetection();
     x += dx;
 
     y += dy;
@@ -159,8 +157,8 @@ function draw() {
             } else {
                 x = canvas.width / 2;
                 y = canvas.height - 30;
-                dx = 2;
-                dy = 2;
+                dx = 4;
+                dy = 4;
                 paddleX = (canvas.width - paddleWidth) / 2
             }
         }
@@ -176,7 +174,6 @@ function draw() {
 }
 
 
-draw();
 
 
 

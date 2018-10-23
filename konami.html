@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+
+    <style>
+        * { padding: 0; margin: 0; }
+        canvas { background: #eee; display: block; margin: 0 auto; }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<br>
+<h1 class="mx-auto" style="width: 250px"><u>Konami Code</u></h1>
+<br>
+<div class="main-containertic">
+    <div class="rowtic">
+        <div class="boxtic margin-50 one"></div>
+        <div class="boxtic margin-50 two"></div>
+        <div class="boxtic margin-50 three"></div>
+    </div>
+    <div class="rowtic">
+        <div class="boxtic four"></div>
+        <div class="boxtic five"></div>
+        <div class="boxtic six"></div>
+    </div>
+    <div class="rowtic">
+        <div class="boxtic seven"></div>
+        <div class="boxtic eight"></div>
+        <div class="boxtic nine"></div>
+    </div>
+</div>
+
+<h1 class="konamih1">TIC-TAC-TOE</h1>
+
+<br>
+<br>
+
+<h2 class="player-x konamih2">Player X turn</h2>
+<h2 class="player-o konamih2">Player O turn</h2>
+
+
+<canvas class="border border-dark" id="myCanvas" width="800" height="350"></canvas>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="jquery.konami.min.js"></script>
+<script src="js/Breakout_JS.js"></script>
+<script src="js/tic-tac-toe.js"></script>
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+    $('#myCanvas').hide();
+    $('.main-containertic').hide();
+    $('.konamih1').hide();
+    $('.konamih2').hide();
+
+    //’secret’ specifies the numerical keystrokes
+    var secret = "3838404037393739666513";
+    var cowlevel = "8472698269738378796779877669866976";
+    var input = "";
+    var timer;
+
+    //The following function sets a timer that checks for user input.
+    $(document).keyup(function(e) {
+        input += e.which;
+        clearTimeout(timer);
+        timer = setTimeout(function() { input = ""; }, 10000);
+        check_input();
+    });
+
+    //Once the time is up, this function is run to see if the user’s input is the same as the secret code
+    function check_input() {
+        if(input == secret) {
+            var audio = new Audio('audio/hyrule.mp3');
+            audio.play();
+            $('#myCanvas').show();
+            alert("Would you like to play a game?");
+            setTimeout(draw(), 3000);
+        } if (input == cowlevel) {
+            var audio = new Audio('audio/mario.mp3');
+            audio.play();
+            alert("How about some tic-tac-toe?");
+            $('.main-containertic').show();
+            $('.konamih1').show();
+            $('.konamih2').show();
+            setTimeout(tic(), 3000);
+        }
+    }
+</script>
+</body>
+</html>

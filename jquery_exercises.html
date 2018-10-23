@@ -18,11 +18,26 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
-    $(document).ready(function() {
-        alert("hello");
-        var Id = $('.xanadu').html();
-        alert(Id);
-    })
+
+    $('h1').click(
+        function() {
+        $(this).css('background-color', 'red');
+    });
+
+    $('p').dblclick(
+        function() {
+            $(this).css('font-size', '18px');
+        }
+    );
+
+    $('li').hover(
+        function () {
+            $(this).css('color', 'blue');
+        }, function() {
+            $(this).css('color', 'black');
+        }
+    );
+
 </script>
 </body>
 </html>
