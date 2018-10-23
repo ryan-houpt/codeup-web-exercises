@@ -7,8 +7,7 @@
     $('.konamih1').css('margin-left', '700px');
     $('.konamih2').css('margin-left', '700px');
     $('.margin-50').css('margin-left', '50px');
-    $('.x').css('font-size', '100px');
-    $('.o').css('font-size', '100px');
+    $('.letter').css('font-size', '100px');
 
 
 function tic() {
@@ -18,16 +17,19 @@ function tic() {
 
     $('.boxtic').click(function () {
         if (isX === true) {
-                $(this).html('<div class="x">' + 'x' + '</div>');
-                isX = false;
-                $('.player-o').show();
-                $('.player-x').hide();
-            }
-         else {
-                $('.player-o').hide();
-                $('.player-x').show();
-                $(this).html('<div class="o">o</div>');
-                isX = true;
-            }
+            $(this).children().html('x');
+            isX = false;
+            $(this).off("click");
+            $('.player-o').show();
+            $('.player-x').hide();
+        }
+        else {
+            $('.player-o').hide();
+            $('.player-x').show();
+            $(this).children().html('o');
+            $(this).off("click");
+            isX = true;
+        }
+
     });
 }
