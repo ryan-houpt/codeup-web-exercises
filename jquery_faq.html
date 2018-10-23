@@ -47,9 +47,9 @@
 <br>
 <br>
 
-<div Id="picture1" class="pictureframe"><img src="Img/picture1.jpeg"></div>
-<div Id="picture2" class="pictureframe"><img src="Img/picture2.jpg"></div>
-<div Id="picture3" class="pictureframe"><img src="Img/picture3.jpg"></div>
+<div Id="picture1" class="pictureframe"><img class="wide height" src="Img/picture1.jpeg"></div>
+<div Id="picture2" class="pictureframe"><img class="wide height" src="Img/picture2.jpg"></div>
+<div Id="picture3" class="pictureframe"><img class="wide height" src="Img/picture3.jpg"></div>
 
 <button class="picture1button">left</button>
 <button class="picture2button">center</button>
@@ -67,7 +67,7 @@
 
 
     $('h3').click(function() {
-        $('li').css('font-weight', 'bold');
+        $('li').parent().css('font-weight', 'bold');
     });
 
     $('li').click(function() {
@@ -79,6 +79,8 @@
     $('.pictureframe').css('border', '1px solid black');
     $('.pictureframe').css('float', 'left');
     $('.pictureframe').css('margin-left', '50px');
+    $('.wide').css('width', '100%');
+    $('.height').css('height', '100%');
 
     $('.picture1button').click(function() {
         $('#picture1').append($('#picture2 img:first-child'));
