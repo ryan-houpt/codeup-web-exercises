@@ -39,7 +39,7 @@
 <h2 class="player-x konamih2">Player X turn</h2>
 <h2 class="player-o konamih2">Player O turn</h2>
 
-
+<button id="reload" class="margin-50 button">Reload</button>
 <canvas class="border border-dark" id="myCanvas" width="800" height="350"></canvas>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="jquery.konami.min.js"></script>
@@ -56,12 +56,13 @@
     $('.main-containertic').hide();
     $('.konamih1').hide();
     $('.konamih2').hide();
+    $('.button').hide();
 
     //’secret’ specifies the numerical keystrokes
-    var secret = "3838404037393739666513";
-    var cowlevel = "8472698269738378796779877669866976";
-    var input = "";
-    var timer;
+    var secret = "3838404037393739666513"; //konami code
+    var cowlevel = "8472698269738378796779877669866976"; //thereisnocowlevel
+    var input = ""; //default input from the user
+    var timer; //timer
 
     //The following function sets a timer that checks for user input.
     $(document).keyup(function(e) {
@@ -78,6 +79,7 @@
             audio.play();
             $('#myCanvas').show();
             alert("Would you like to play a game?");
+            $('body').css('background', 'blue');
             setTimeout(draw(), 3000);
         } if (input == cowlevel) {
             var audio = new Audio('audio/mario.mp3');
@@ -86,6 +88,8 @@
             $('.main-containertic').show();
             $('.konamih1').show();
             $('.konamih2').show();
+            $('.button').show();
+            $('body').css('background', 'red');
             setTimeout(tic(), 3000);
         }
     }

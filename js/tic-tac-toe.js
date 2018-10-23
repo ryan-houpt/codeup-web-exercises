@@ -9,18 +9,19 @@
     $('.margin-50').css('margin-left', '50px');
     $('.letter').css('font-size', '100px');
 
+    var reload = $('.button'); //grab the button to reload
 
 function tic() {
-    var isX = true;
+    var isX = true; //decides the start of play for the first player
 
-    $('.player-o').hide();
+    $('.player-o').hide(); //default hides the second player
 
     $('.boxtic').click(function () {
         if (isX === true) {
-            $(this).children().html('x');
-            isX = false;
-            $(this).off("click");
-            $('.player-o').show();
+            $(this).children().html('x'); //places the ltter
+            isX = false; //switches player
+            $(this).off("click"); //turns off the box
+            $('.player-o').show(); //shows the players turn
             $('.player-x').hide();
         }
         else {
@@ -33,3 +34,7 @@ function tic() {
 
     });
 }
+
+    reload.click(function() {
+        document.location.reload(); //reloads the page
+    });
