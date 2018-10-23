@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<ul class="invisible">
+<ul id="invisible">
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, optio.</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, possimus.</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, totam!</li>
@@ -18,13 +18,83 @@
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, vero.</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, maiores?</li>
 </ul>
+<h3>Park 1</h3>
+<ul id="lastyellow">
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+<h3>Park 2</h3>
+<ul id="lastyellow">
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+<h3>Park 3</h3>
+<ul id="lastyellow">
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
 
+
+<button class="yellow">yellow</button>
 <button class="button">button</button>
+
+<br>
+<br>
+
+<div Id="picture1" class="pictureframe"><img src="Img/picture1.jpeg"></div>
+<div Id="picture2" class="pictureframe"><img src="Img/picture2.jpg"></div>
+<div Id="picture3" class="pictureframe"><img src="Img/picture3.jpg"></div>
+
+<button class="picture1button">left</button>
+<button class="picture2button">center</button>
+<button class="picture3button">right</button>
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $('.button').click(function() {
-        $('.invisible').toggle();
-    })
+        $('#invisible').toggle();
+    });
+
+    $('.yellow').click(function () {
+        $('#lastyellow li:last-child').css('background', 'yellow');
+    });
+
+
+    $('h3').click(function() {
+        $('li').css('font-weight', 'bold');
+    });
+
+    $('li').click(function() {
+        $('ul li:first-child').css('color', 'blue');
+    });
+
+    $('.pictureframe').css('height', '500px');
+    $('.pictureframe').css('width', '250px');
+    $('.pictureframe').css('border', '1px solid black');
+    $('.pictureframe').css('float', 'left');
+    $('.pictureframe').css('margin-left', '50px');
+
+    $('.picture1button').click(function() {
+        $('#picture1').append($('#picture2 img:first-child'));
+        $('#picture2').append($('#picture1 img:first-child'));
+    });
+
+    $('.picture2button').click(function() {
+       $('#picture2').append($('#picture3 img:first-child'));
+       $('#picture3').append($('#picture2 img:first-child'));
+    });
+
+    $('.picture3button').click(function() {
+        $('#picture2').append($('#picture3 img:first-child'));
+        $('#picture3').append($('#picture2 img:first-child'));
+    });
+
 </script>
 </body>
 </html>
