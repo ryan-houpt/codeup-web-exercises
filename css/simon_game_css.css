@@ -1,0 +1,50 @@
+.maincontainercard {
+    margin: auto;
+    border: 3px solid black;
+    width: 450px;
+    height: 450px;
+}
+
+#redcard {
+    float: left;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: .5;
+}
+
+#bluecard {
+    float: left;
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: .5;
+}
+
+#greencard {
+    float: left;
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: .5;
+}
+
+#yellowcard {
+    float: left;
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+    margin-top: 50px;
+    margin-left: 50px;
+    opacity: .5;
+}
+
+.header {
+    margin: auto;
+}
