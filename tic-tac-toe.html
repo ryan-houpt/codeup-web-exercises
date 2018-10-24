@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+<div class="main-container">
+    <div class="row">
+        <div class="box margin-50"><div id="1" class="letter margin-50"></div></div>
+        <div class="box margin-50"><div id="4" class="letter margin-50"></div></div>
+        <div class="box margin-50"><div id="7" class="letter margin-50"></div></div>
+    </div>
+    <div class="row">
+        <div class="box"><div id="2" class="letter margin-50"></div></div>
+        <div class="box"><div id="5" class="letter margin-50"></div></div>
+        <div class="box"><div id="8" class="letter margin-50"></div></div>
+    </div>
+    <div class="row">
+        <div class="box"><div id="3" class="letter margin-50"></div></div>
+        <div class="box"><div id="6" class="letter margin-50"></div></div>
+        <div class="box"><div id="9" class="letter margin-50"></div></div>
+    </div>
+</div>
+
+<h1>TIC-TAC-TOE</h1>
+
+<br>
+<br>
+
+<h2 class="player-x">Player X turn</h2>
+<h2 class="player-o">Player O turn</h2>
+
+<br>
+<br>
+
+<button id="reload" class="margin-50 button">Reload</button>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+    $('.box').css('border', '1px solid black');
+    $('.row').css('float', 'left');
+    $('.box').css('height', '150px');
+    $('.box').css('width', '150px');
+    $('.box').css('margin', 'auto');
+    $('h1').css('margin-left', '700px');
+    $('h2').css('margin-left', '700px');
+    $('.margin-50').css('margin-left', '50px');
+    $('.letter').css('font-size', '100px');
+
+    var isX = true;
+    var reload = $('.button');
+    var xString = "";
+    var oString = "";
+
+
+
+    $('.player-o').hide();
+
+
+    $('.box').click(function () {
+        if (isX === true) {
+            $(this).children().html('x');
+            isX = false;
+            $(this).off("click");
+            $('.player-o').show();
+            $('.player-x').hide();
+            var choice = $(this).children().attr('id');
+            xString += choice;
+        }
+        else {
+            $('.player-o').hide();
+            $('.player-x').show();
+            $(this).children().html('o');
+            $(this).off("click");
+            isX = true;
+            var choice = $(this).children().attr('id');
+            oString += choice;
+        }
+
+
+
+        //123 iterations
+        if (xString === "123") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "123") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "132") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "132") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "213") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "213") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "231") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "231") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "312") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "312") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "321") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "321") {
+            alert("Congrats! O Wins!")
+        }
+
+
+
+        //456 iterations
+        if (xString === "456") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "456") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "465") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "465") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "564") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "564") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "546") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "546") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "654") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "654") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "645") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "645") {
+            alert("Congrats! O Wins!")
+        }
+
+
+
+        //789 iterations
+        if (xString === "789") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "789") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "798") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "798") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "897") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "897") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "879") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "879") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "978") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "978") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "987") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "987") {
+            alert("Congrats! O Wins!")
+        }
+
+        //147 iterations
+        if (xString === "147") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "147") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "174") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "174") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "714") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "714") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "741") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "741") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "471") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "471") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "417") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "417") {
+            alert("Congrats! O Wins!")
+        }
+
+        //258 iterations
+        if (xString === "258") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "258") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "285") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "285") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "825") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "825") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "852") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "852") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "528") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "528") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "582") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "582") {
+            alert("Congrats! O Wins!")
+        }
+
+        //369 iterations
+        if (xString === "369") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "369") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "396") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "396") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "963") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "963") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "936") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "936") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "693") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "693") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "639") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "639") {
+            alert("Congrats! O Wins!")
+        }
+
+        //159 iterations
+        if (xString === "159") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "159") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "195") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "195") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "915") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "915") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "951") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "951") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "591") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "591") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "519") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "519") {
+            alert("Congrats! O Wins!")
+        }
+
+        //357 iterations
+        if (xString === "357") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "357") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "375") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "375") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "735") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "735") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "753") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "753") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "573") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "573") {
+            alert("Congrats! O Wins!")
+        }
+        if (xString === "537") {
+            alert("Congrats! X Wins!")
+        }
+        if (oString === "537") {
+            alert("Congrats! O Wins!")
+        }
+    });
+
+    console.log(xString);
+
+
+
+    reload.click(function() {
+        document.location.reload();
+    })
+
+</script>
+</body>
+</html>
