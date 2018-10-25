@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="names-list">
+
+</div>
+<button id="add-names-btn">People</button>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/pre-ajax.js"></script>
+
+<script>
+
+    // - add functionality to the button so that when it is clicked, an unordered list of names from the people array
+    // (included below) is added to the inner HTML of the div#names-list. For an extra bonus,
+    // make the font color of each list item map to that person's favColor value.
+
+    console.log(people.name);
+
+    $('#add-names-btn').click(function() {
+        var htmlStart = '<ul>';
+        var htmlEnd = '</ul>';
+        var liString = "";
+
+        for (i = 0; i < people.length; i++) {
+            var li =  '<li>' + people[i].name + '</li>';
+            liString += li;
+            }
+
+        $('#names-list').html(htmlStart + liString + htmlEnd)
+
+
+    })
+
+</script>
+</body>
+</html>
