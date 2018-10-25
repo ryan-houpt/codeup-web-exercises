@@ -2,13 +2,14 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
-<table id="products">
-    <thead>
+<table class="table" id="products">
+    <thead class="thead-dark">
     <tr>
         <th>Title</th>
         <th>Quantity</th>
@@ -52,7 +53,7 @@
                 function buildTitleHTML(data) {
                     var titleHTML = "";
                     data.forEach(function (data) {
-                        titleHTML += "<tr><td>" + data.title + '</td>';
+                        titleHTML += "<tr class='table-primary'><td>" + data.title + '</td>';
                         titleHTML += '<td>' + data.quantity + '</td>';
                         titleHTML += '<td>' + data.price + '</td>';
                         titleHTML += '<td>' + data.categories + '</td>';

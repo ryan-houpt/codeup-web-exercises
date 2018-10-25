@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="emoji">
+
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+    $.ajax('https://fetchapi-img.glitch.me/emojis.json').done(function() {
+
+        console.log(emoji[1].Name);
+
+        function emojiGenerator(emoji) {
+            var emojiHTML = "";
+            for (i = 0; i < emoji.length; i++){
+                emojiHTML += '<span>' + emoji[i].name + '</span>';
+                emojiHTML += '<img src=' + emoji[i].value + '>';
+            }
+            console.log(emojiHTML);
+            return emojiHTML;
+
+        }
+
+        $('#emoji').append(emojiGenerator);
+
+    });
+
+</script>
+</body>
+</html>
