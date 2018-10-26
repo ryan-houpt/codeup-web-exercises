@@ -3,17 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="amber darken-2">
+<div class="container">
+<nav>
+    <div class="nav-wrapper amber accent-one">
+        <a href="#" class="brand-logo">My Personal Blog</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">About me</a></li>
+            <li><a href="badges.html">Contact me</a></li>
+            <li><a href="collapsible.html">Find me</a></li>
+        </ul>
+    </div>
+</nav>
 
-<div id="posts">
+<ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+        <div class="background">
+            <img src="img/picture1.jpeg">
+        </div>
+        <a href="#user"><img class="circle" src="img/picture2.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
 
+<ul id="posts" class="collapsible amber darken-4">
+
+
+
+
+</ul>
+
+<div class="col s12 m8 offset-m2 l6 offset-l3">
+    <div class="card-panel orange darken-4 z-depth-1">
+        <div class="row valign-wrapper">
+            <div class="col s2">
+                <button id="quote" class="btn">Quote!</button>
+                <img src="img/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span id="display" class="white-text">
+
+              </span>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 <script>
 
     $.ajax('data/blog.json').done(function(blogs) {
@@ -22,17 +74,33 @@
             var blogPosts = "";
 
             blogs.forEach(function(blog) {
-                blogPosts += '<div>' + blog.title + '</div><br>';
-                blogPosts += '<section>' + blog.content + '</section>';
-                blogPosts += '<br><span class="categories">' + blog.categories + '</span>' + " ";
-                blogPosts += '<span class="date">' + blog.date + '</span><br><br><hr><br><br>';
+                blogPosts += '<li><div class="collapsible-header amber accent-3">' + blog.title + '</div>';
+                blogPosts += '<div class="collapsible-body"><section class="white-text">' + blog.content + '</section>';
+                blogPosts += '<br><span class="categories white-text">' + blog.categories + '</span>' + '<span class="white-text"> - </span>';
+                blogPosts += '<span class="date white-text">' + blog.date + '</span></div></li>';
             });
             return blogPosts;
         }
 
-        $('#posts').append(blogPosts(blogs));
+        $('#posts').html(blogPosts(blogs));
+
+        $('.collapsible').collapsible();
+
+        $('.collapsible-header').click(function() {
+            M.toast({html: 'Hope you enjoy the post!', classes: 'rounded'});
+        });
+
+        $('.sidenav').sidenav()
 
     });
+
+
+    function callQuote() {
+        $.ajax('http://quotes.stormconsultancy.co.uk/random.json').done(function(quotes) {
+            $('#display').html(quotes.author + ': ' + '"' + quotes.quote + '"')
+        })}
+
+    $('#quote').click(callQuote);
 
 </script>
 </body>
