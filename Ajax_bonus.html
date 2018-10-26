@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box {
+            height: 100px;
+            width: 550px;
+            background: lightgrey;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<h1 class="mx-auto" style="width: 300px">So What'll It Be?</h1>
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col">
+            <button id="joke" class="btn btn-primary mx-auto float-right" style="width: 100px">Get Joke</button>
+        </div>
+        <div class="col">
+            <div id="display" class="box mx-auto">Test</div>
+        </div>
+        <div class="col">
+            <button id="quote" class="btn btn-primary mx-auto" style="width: 100px">Get Quote</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+
+    function callQuote() {
+        $.ajax('http://quotes.stormconsultancy.co.uk/random.json').done(function(quotes) {
+                $('#display').html(quotes.author + ': ' + '"' + quotes.quote + '"')
+    })}
+
+    $('#quote').click(function() {
+        callQuote();
+    });
+
+
+    $('#joke').click(function() {
+        callJoke();
+    });
+
+    function callJoke() {
+        $.ajax('http://api.icndb.com/jokes/random/').done(function(jokes) {
+            $('#display').html('"' + jokes.value.joke + '"')
+    })}
+
+</script>
+</body>
+</html>
