@@ -1,0 +1,44 @@
+body {
+    background-color: darkblue;
+}
+
+#mainbox {
+    height: 580px;
+    width: 900px;
+    margin: auto;
+    background-color: lightblue;
+}
+
+#maintitle {
+    padding-top: 1px;
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+#city {
+    padding-left: 15px;
+    font-size: 25px;
+}
+
+.weatherboxes {
+    height: 30vh;
+    width: 30%;
+    background-color: lightgrey;
+    float: left;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.max-min-temp {
+    /*margin-left: 70px;*/
+    font-size: 25px;
+}
+
+.weatherdata {
+    font-weight: bold;
+}
+
+.pressure {
+    font-size: 15px;
+    font-weight: bold;
+}
