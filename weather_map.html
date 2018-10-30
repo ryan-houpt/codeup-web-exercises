@@ -16,7 +16,9 @@
 </head>
 <body>
 <div id="mainbox">
+    <div class="container">
 <span id="maintitle">Weather Application! Selected City: </span><span id="city"><!-- City goes here --></span>
+    </div>
     <div id="map-output"></div>
     <div id="cards"></div><div id="map-canvas"></div>
 </div>
@@ -48,7 +50,7 @@
         type: "GET",
         data: {
             APPID: "bb2a25831fb3c3f6a1657fb9ae4d79f5",
-            q: "Dallas, US",
+            q: "San Antonio, US",
             units: "Imperial"
         }
     }).done(function(data) {
@@ -94,7 +96,7 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 13,
-        center: {lat: 32.7767, lng: -96.7970}
+        center: {lat: 29.4241, lng: -98.4936}
     });
 
 
@@ -102,7 +104,7 @@ function initMap() {
         map: map,
         draggable: true,
         animation: google.maps.Animation.DROP,
-        position: {lat: 32.7767, lng: -96.7970}
+        position: {lat: 29.4241, lng: -98.4936}
     });
 
     // // intercept map and marker movements
