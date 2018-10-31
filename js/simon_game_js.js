@@ -1,5 +1,5 @@
-var userInput = [];
-var computerInput = [];
+let userInput = [];
+let computerInput = [];
 
 
 
@@ -10,10 +10,10 @@ function randomColor() {
 function randomColorSelection() {
 
     randomColor();
-    var computerChoice = randomColor();
+    let i;
+    for (i = 2; i < computerInput.length; i += 2) {
 
-
-    do {
+        let computerChoice = randomColor();
 
         if (computerChoice === 1) {
             setTimeout(function () {
@@ -46,15 +46,19 @@ function randomColorSelection() {
             setTimeout(function () {
                 $('#yellowcard').css('opacity', '.5');
             }, 1000);
+
+            computerInput += computerChoice;
         }
 
-        computerInput += computerChoice;
+
+
+
         console.log(computerInput);
 
-    } while (computerInput === userInput);
+    }
 
+}
 
-
-
+function runGame() {
 
 }
