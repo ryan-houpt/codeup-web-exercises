@@ -55,12 +55,9 @@ console.log(output);
 // Use reduce to get the total years of experience from the list of users.
 // Once you get the total of years you can use the result to calculate the average.
 
-let years = users.map(user => user.yearsOfExperience);
 
-console.log(years);
-
-const sum = years.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
+const sum = users.reduce(function (accumulator, user) {
+    return accumulator + user.yearsOfExperience;
 }, 0);
 
 console.log(sum);
@@ -84,10 +81,10 @@ console.log(longestWord);
 //     Use reduce to get the list of user's names in a single string.
 // Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
-let userNames = users.map(user => user.name);
 
-let singleString = userNames.reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue;
-});
+
+let singleString = users.reduce((accumulator, user) => {
+    return accumulator + user.name + ", ";
+}, "");
 
 console.log(singleString);
