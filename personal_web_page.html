@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal WebPage/Gallery</title>
+    <link rel="stylesheet" href="css/personal_page.css">
+</head>
+<body>
+<h1 class="hide">Ryan's Page</h1>
+
+<section class="hide" id="navbarsetup">That's the great think about computers and puzzles though... sometimes when you click around enough, things will <span id="navclick"><i>setup</i></span> the way you want. </section>
+
+<section id="headerquestion" class="hide"> Let's add some HTML... I need at least a title... what should I use? <br>
+    <select id="headerchoice" name="headerchoice">
+        <option value="h1choice">h1</option>
+        <option value="span">span</option>
+        <option value="div">div</option>
+        <option value="what?">what's a header</option>
+        <option value="easy">easy</option>
+    </select>
+    <button for="headerchoice" id="headersubmit">Submit</button>
+</section>
+
+<ul class="hide">
+    <li>
+        About me
+    </li>
+    <li>
+        Projects
+    </li>
+    <li>
+        Resume
+    </li>
+    <li>
+        Contact
+    </li>
+</ul>
+
+<p class="hide">
+    Welcome to my page! Here you can see the many different projects that I have worked on while I was going to school at CodeUp.
+    Thank you for taking the time to view my page. I would love to hear from you and get your thoughts.
+</p>
+
+<p class="hide">
+    While I was a student at CodeUp I learned a number of new languages. Under their full-stack development program, I learned;
+    <ol class="hide">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>JQuery</li>
+        <li>Java</li>
+        <li>MySQL</li>
+    </ol>
+</p>
+
+
+
+
+
+<script src="js/personal_page.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+
+
+    // Closure last-height/width
+    let lastX = window.innerWidth;
+    let html = "";
+
+    function orderListOnResize() {
+        let x = window.innerWidth;
+        if (lastX <= 400) {
+            $("ol").removeClass("hide");
+            alert("Sweet, thank you!");
+            setTimeout(function() {
+                $('body').toggleClass('whisp');
+                setTimeout(fullPage(), 4000)
+            }, 2000);
+        }
+        lastX = x
+    }
+
+    function siteVisit() {
+        if (performance.navigation.type !== 1) {
+            function buildHeader() {
+                $('#headerquestion').toggleClass('hide');
+                alert("Hello! Welcome to my page!");
+                alert("I appreciate you taking the time to look around.");
+                alert("Odd... there isn't anything here... well that's unfortunate.");
+                alert("Do you think you can help me add some info?");
+
+
+                $('#headersubmit').click(function () {
+                    var headerSelect = document.getElementById("headerchoice");
+                    var selectedText = headerSelect.options[headerSelect.selectedIndex].text;
+                    switch (selectedText) {
+                        case 'h1':
+                            alert("Perfect choice!");
+                            $('h1').toggleClass('hide');
+                            $('#headerquestion').toggleClass('hide');
+                            buildNavBar();
+                            break;
+                        case 'span':
+                            alert("While technically could work... it wouldn't really capture what we want.");
+                            break;
+                        case 'div':
+                            alert("Well... not really the choice I would go for... but I suppose that could work.");
+                            break;
+                        case `what's a header`:
+                            alert("The header is essentially the title display for the page.");
+                            break;
+                        case `easy`:
+                            alert("Alright, well thast no fun. But here is the final page");
+                    }
+                });
+            }
+
+            function buildNavBar() {
+                setTimeout(function () {
+                    alert("Alright, great start! We got the title. But this doesn't really give us much functionality. " +
+                        "Can't even go anywhere. Let's get a Nav bar.");
+                    alert("This time it won't be so easy though... Let's play a little game.");
+                    $('#navbarsetup').toggleClass('hide');
+                    $('#navclick').click(function () {
+                        alert("Perfect! You found how to build our nav bar!");
+                        $('#navbarsetup').toggleClass('hide');
+                        $('ul').toggleClass('hide');
+                        buildParagraph();
+                    })
+                }, 500);
+            }
+
+            function buildParagraph() {
+                setTimeout(function () {
+                    alert("Sweet! We have a nav bar!");
+                    alert("Not much good though if we still have literally zero content.");
+                    alert("Alright, I'll make this one easy for you and get it plugged in... it is about me after all.");
+                    setTimeout(function() {
+                        alert("Hmm.... this is odd... my code seems to be broken.");
+                        alert("Can you do me a favor and refresh the page to see if we can get it kicked up again?");
+                    }, 2000)
+                }, 500)
+            }
+            buildHeader();
+        }
+    else {
+
+            $('h1').toggleClass('hide');
+            $('ul').toggleClass('hide');
+            alert('Thanks!');
+            alert('Alright, lets give this another try');
+            setTimeout(function () {
+                $('p').toggleClass('hide');
+                }, 1000);
+            setTimeout(function () {
+                alert("boom! Perfect! Back in business");
+                alert("Now that we have that figured out... there was one more piece of information that I wanted to show you, hold on just one moment here.");
+                setTimeout(function() {
+                    alert("Alright, I'm having some trouble again, can you do me one more favor and resize your browser a few times?")
+                    window.onresize = function(){
+                        setTimeout(orderListOnResize(), 1500)
+                    };
+                }, 3000)
+            }, 1500)
+        }
+    }
+
+    function fullPage() {
+        alert('Lets get rid of that garbage.');
+        setTimeout(function() {
+            $('body').html("");
+            alert("That was all good and fun. But lets jump in to what you came here to see.")
+            completedPage();
+        }, 4000)
+    }
+
+    function completedPage(){
+        location.replace("test_personal_web_page.html");
+    }
+
+    siteVisit();
+</script>
+</body>
+</html>
